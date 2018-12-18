@@ -1,4 +1,4 @@
-# vue-mobile-calendar
+# vue-pagination
 
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg) ![Github file size](https://img.shields.io/badge/size-7kb-brightgreen.svg)
 ![npm](https://img.shields.io/badge/npm-6.3.0-red.svg)
