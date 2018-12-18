@@ -1,0 +1,50 @@
+{
+  "name": "v-pc-pagination",
+  "version": "1.0.1",
+  "author": "meadiven",
+  "description": "A vue pagination component for pc.",
+  "main": "dist/vue-mobile-calendar.umd.js",
+  "module": "dist/vue-mobile-calendar.esm.js",
+  "unpkg": "dist/vue-mobile-calendar.min.js",
+  "private": false,
+  "browser": {
+    "./sfc": "src/vue-pagination.vue"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meadiven/vue-pagination.git"
+  },
+  "homepage": "https://github.com/meadiven/vue-pagination.git",
+  "keywords": [
+    "vue",
+    "page",
+    "pagination",
+    "pc"
+  ],
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/vue-pagination.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/vue-pagination.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/vue-pagination.min.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "cross-env": "^5.2.0",
+    "less": "^3.9.0",
+    "minimist": "^1.2.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.1.0",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.3.2",
+    "vue": "^2.5.21",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
