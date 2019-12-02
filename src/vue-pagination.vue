@@ -3,7 +3,7 @@
         <div class="page">
             <div class="pre" :class="{enable: pre}" @click="prePage">上一页</div>
             <ul class="page-list">
-                <li class="page-item" :class="{'page-more': p.type == 'more', 'active': p.text == index}" v-for="p in pages" @click="changePage(p.text)">
+                <li class="page-item" :class="{'page-more': p.type == 'more', 'active': p.text == index}" v-for="p in pages" @click="changePage(p)">
                     {{p.text}}
                 </li>
             </ul>
@@ -119,7 +119,10 @@
                 this.next && (this.index += 1);
             },
             changePage (page) {
-                this.index = page;
+                if(page.type == 'more') {
+                    return;
+                }
+                this.index = page.text;
             }
         }
     }
